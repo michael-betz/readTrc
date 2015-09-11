@@ -1,5 +1,6 @@
 # readTrc
-Little Python helper function to read .trc binary files from LeCroy Oscilloscopes
+Little Python helper function to read .trc binary files from LeCroy Oscilloscopes.
+Tested on Python3.
 
 # Installation
 Just copy the `readTrc.py` file in your python path.
@@ -11,7 +12,8 @@ fName = "./C1_00000.trc"
 datX, datY, m = readTrc.readTrc( fName )
 ```
 
-Note that m is a dictionary which contains the metadata. For example:
+Note that in the above example `m` is a dictionary which contains the metadata. 
+For example:
 ```
 {'ACQ_DURATION': 0.0,
  'ACQ_VERT_OFFSET': 0.0,
