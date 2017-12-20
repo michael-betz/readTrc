@@ -35,11 +35,11 @@ def readTrc( fName ):
         #------------------------
         # Get binary format / endianess
         #------------------------
-        if readX( fid, '?', wdOffset + 32 ):  #16 or 8 bit sample format?
+        if readX( fid, 'H', wdOffset + 32 ):  #16 or 8 bit sample format?
             smplFmt = "int16"
         else:
             smplFmt = "int8"
-        if readX( fid, '?', wdOffset + 34 ):  #Big or little endian?
+        if readX( fid, 'H', wdOffset + 34 ):  #Big or little endian?
             endi = "<"
         else:
             endi = ">"
